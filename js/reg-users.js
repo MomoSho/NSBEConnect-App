@@ -10,13 +10,15 @@ var users = [
 			"password": "helloworld",
 			"lat": "20",
 			"lng": "30",
-			"events": []
+			"events": ["Region III Fall Conferenece (FRC)"]
 		},
 		{"username": "JoYoung",
 			"password": "hiworld",
 			"lat": "25",
 			"lng": "32",
-			"events": []
+			"events": ["NSBE's 42nd Annual Convention",
+						"Regional Leadership Conference"
+			]
 		}
 
 ];
@@ -27,7 +29,7 @@ console.log(activeUsr.username);
 
 
 /*** User Login ***/
-var loginbtn = document.getElementById("Login");
+/*var loginbtn = document.getElementById("Login");
 loginbtn.addEventListener("click", function(event) {
 	var usrbtn = document.getElementById("Username").value;
 	var passbtn = document.getElementById("Password").value;
@@ -51,10 +53,10 @@ loginbtn.addEventListener("click", function(event) {
 	else {
 		alert("Username and/or Password are empty. Please fill these in and try again");
 	}
-}, false);
+}, false);*/
 
 /*** User Register for Event ***/
-/*var frcbtn = document.getElementById("FRCR3");
+var frcbtn = document.getElementById("FRCR3");
 frcbtn.addEventListener("click", function(event) {
 	if(newActiveUSer === 0) {
 		alert("Please log in to register for this event");
@@ -62,4 +64,4 @@ frcbtn.addEventListener("click", function(event) {
 	else {
 		activeUsr.events.push("Region III Fall Conferenece (FRC)");
 	}
-});*/
+});
