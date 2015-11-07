@@ -1,5 +1,9 @@
 var users = [
 	
+		{"username": "NoOne",
+			"password": "",
+			"location": ""
+		},
 		{"username": "MoSho",
 			"password": "helloworld",
 			"location": "20,30"
@@ -11,10 +15,17 @@ var users = [
 
 ];
 
+var activeUsr = users[0];
+
 var loginbtn = document.getElementById("Login");
-loginbtn.addEventListener("click", function() {
+/*if(loginbtn == null) {
+	alert("null");
+}*/
+loginbtn.addEventListener("click", function(event) {
 	var usrbtn = document.getElementById("Username");
-	var passbtn = document.getElementById("password");
+	var passbtn = document.getElementById("Password");
+
+	activeUsr = users[2];
 
 	alert("CLICK!");
-});
+}, false);
