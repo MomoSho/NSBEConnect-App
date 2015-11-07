@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<TITLE>Geolocation Basic</TITLE>
+	</HEAD>
+	
+	<BODY>
+		<a href="#" id="get_location"> Get Location</a>
+		
+		<div id="map">
+			<iframe id="g_map" width="425" height="350" frameborder="0" scrolling"no" marginheight="0" src="https://maps.google.co.uk?output=embed"></iframe>
+		</div>
+		
+		<script>
+			var doc = document;
+			
+			// callback function
+			// http://www.creative-tim.com/ ***2 ufl
+			var locationSuccessfullyObtained = function(position) {
+				var latitude = position.coords.latitude;
+				var longitude = position.coords.longitude;
+				var coordinates = latitude + ", " + longitude;
+				
+				// replace google map iframe source with the location
+				// q: query string; in this particular case, the query string is the coordinates
+				// z: the zoom
+				document.getElementById("g_map").setAttribute("src", "https://maps.google.co.uk?q=" + coordinates + "&z=60&output=embed");
+			};
+			
+			document.getElementById('get_location').onclick = function() {
+				navigator.geolocation.getCurrentPosition(locationSuccessfullyObtained);
+				return false;
+			};
+		</script>
+	</BODY>
+</HTML>

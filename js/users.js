@@ -1,10 +1,12 @@
 var users = [
 	
 		{"username": "MoSho",
-			"password": "helloworld"
+			"password": "helloworld",
+			"location": "20,30"
 		},
 		{"username": "JoYoung",
-			"password": "hiworld"
+			"password": "hiworld",
+			"location": "25,32"
 		}
 
 ];
