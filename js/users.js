@@ -2,15 +2,18 @@ var users = [
 	
 		{"username": "NoOne",
 			"password": "",
-			"location": ""
+			"lat": "",
+			"lng": ""
 		},
 		{"username": "MoSho",
 			"password": "helloworld",
-			"location": "20,30"
+			"lat": "20",
+			"lng": "30"
 		},
 		{"username": "JoYoung",
 			"password": "hiworld",
-			"location": "25,32"
+			"lat": "25",
+			"lng": "32"
 		}
 
 ];
@@ -19,6 +22,8 @@ var activeUsr = users[0];
 var newActiveUSer = 0;
 console.log(activeUsr.username);
 
+
+/*** User Login ***/
 var loginbtn = document.getElementById("Login");
 loginbtn.addEventListener("click", function(event) {
 	var usrbtn = document.getElementById("Username").value;
@@ -35,14 +40,14 @@ loginbtn.addEventListener("click", function(event) {
 
 				alert(activeUsr.username + " has successfully logged in!");
 			}
-			/*else {
-				alert("Username and/or Password are incorrect. Please try again");
-			}*/
-		});
-		//console.log("user index " + newActiveUSer);
-		
+			if(index === users.length - 1 && newActiveUSer === 0){
+				alert("Log in unsuccessful. Please try again");
+			}
+		});		
 	}
 	else {
 		alert("Username and/or Password are empty. Please fill these in and try again");
 	}
 }, false);
+
+/*** User Register for Event ***/
